@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "start": "nodemon app.ts"
+    "start": "nodemon app.ts",
+    "build":"tsc"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
