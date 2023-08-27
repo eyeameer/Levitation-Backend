@@ -27,7 +27,6 @@ interface IResponse {
 }
 
 export const register = asyncWrapper(async (req: IRequest, res: IResponse) => {
-  console.log(req.cleanData)
   if (!req.cleanData.email || !req.cleanData.password || !req.cleanData.name) {
     res
       .status(StatusCodes.BAD_REQUEST)

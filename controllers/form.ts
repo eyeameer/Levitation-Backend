@@ -40,8 +40,7 @@ export const upload = multer({ storage });
 // Creating a post route for the endpoint
 export const formDataSubmit = asyncWrapper(async (req: any, res: any) => {
   // Getting the form data from the request body and files
-  const { createdBy, name, languages, email, phone, address, geolocationStatus } = req.body;
-  console.log(req.body)
+  const {  name, languages, email, phone, address, geolocationStatus } = req.body;
   const files = req.files;
   const { userId } = req.user
   // Creating an array of file ids from GridFS
@@ -54,9 +53,7 @@ export const formDataSubmit = asyncWrapper(async (req: any, res: any) => {
   // Creating a new document with the form data and file ids
   try {
     const user = await Form.findOne({ createdBy: userId })
-    console.log("non created ran")
     if (!user) {
-      console.log("not user ran")
       const formData = new Form({
         createdBy: userId,
         $push: {
