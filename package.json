@@ -33,6 +33,7 @@
     "@types/jsonwebtoken": "^9.0.2",
     "@types/sanitize-html": "^2.9.0",
     "nodemon": "^3.0.1",
-    "ts-node": "^10.9.1"
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
   }
 }
