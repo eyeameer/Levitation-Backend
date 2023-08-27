@@ -5,9 +5,8 @@ export const asyncWrapper = (fn: Function) => {
     try {
       await fn(req, res, next)
     } catch (error) {
-      
       next(error)
-      
+  
     }
   }
 }
